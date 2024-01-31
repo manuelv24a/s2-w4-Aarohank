@@ -28,6 +28,15 @@ public class Player {
 	public void remember (boolean opponentChoice) {		
 	}
 
+
+	//report negative if this score is less than others score
+	//report postive number if this is greater than other
+	//report 0 if scores are equal
+
+	public int compareTo(Player other){
+		return this.score() - other.score();
+	}
+
 	public String toString(){
         return "Player got: " + this.score();
     }

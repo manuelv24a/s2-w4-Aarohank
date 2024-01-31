@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Write a description of class Simulation here.
@@ -6,10 +7,18 @@
  * @version (a version number or a date)
  */
 public class Simulation {
-
+    ArrayList<Player> players = new ArrayList<Player>();{
+    players.add(new TitForTat( ));
+    players.add(new Competitor( ));
+    players.add(new RandomChooser( ));
+    players.add(new Unforgiving( ));
+    players.add(new Player( ));
+    }
     final static boolean DEBUGGING = false;
-    Player p1 = new TitForTat( );
+    for(int x =0; z < 500; x++){
+    p1 = players.get(int)(Math.random()*players.size());
     Player p2 = new Player ( );
+    }
     
     public Simulation ( ) {
         this (200);
@@ -48,6 +57,10 @@ public class Simulation {
         System.out.println ("Player 1 has " + p1);
         System.out.println ("Player 2 has " + p2);
     }
+    for(Player p: players){
+        System.out.println(p);
+    }
     
 
 }
+
